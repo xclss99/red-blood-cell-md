@@ -25,9 +25,9 @@
 import { computed } from 'vue'
 import { useAppStore } from '@/store'
 import { Splitpanes, Pane } from 'splitpanes'
-import InitForm from '@/components/form/forms/InitForm.vue.js'
-// import InitModelForm from '@/components/form/InitModelForm.vue'
-import LammpsInputForm from '@/components/form/forms/LammpsInputForm.vue.js'
+import InitForm from '@/components/form/forms/InitForm.vue'
+// import InitModelForm from '@/components/form/forms/InitModelForm.vue'
+import LammpsInputForm from '@/components/form/forms/LammpsInputForm.vue'
 import LammpsModel from '@/components/model/LammpsModel.vue'
 import Logger from '@/components/logger/Logger.vue'
 

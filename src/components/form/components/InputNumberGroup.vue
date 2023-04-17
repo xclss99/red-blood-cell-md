@@ -23,19 +23,19 @@ import { ref } from 'vue'
 
 type Size = 'tiny' | 'small' | 'medium' | 'large'
 interface Props {
-  defaultValue: number[]
-  placeholder: string
-  clearable: boolean
-  disabled: boolean
-  readonly: boolean
-  round: boolean
-  size: Size
-  step: number
-  max: number
-  min: number
+  defaultValue?: number[]
+  placeholder?: string
+  clearable?: boolean
+  disabled?: boolean
+  readonly?: boolean
+  round?: boolean
+  size?: Size
+  step?: number
+  max?: number
+  min?: number
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = withDefaults(defineProps<Partial<Props>>(), {
+const props = withDefaults(defineProps<Props>(), {
   placeholder: 'please input number',
   clearable: true,
   size: 'small',

@@ -34,12 +34,12 @@ export const initModelFormSettings: Form.Settings = {
         max: 100
       }
     },
-    {
-      name: 'R_vesicle',
-      explain: 'Diameter of the vesicle in initial configuration',
-      type: 'expression',
-      expression: (d) => d / 2
-    },
+    // {
+    //   name: 'R_vesicle',
+    //   explain: 'Diameter of the vesicle in initial configuration',
+    //   type: 'expression',
+    //   expression: (d) => d / 2
+    // },
     {
       name: 'gap',
       explain: 'Gap between bilayer and spectrin network in initial configuration',
@@ -51,12 +51,12 @@ export const initModelFormSettings: Form.Settings = {
         max: 10
       }
     },
-    {
-      name: 'D_network',
-      explain: 'Diameter of Spectrin Network in initial configuration',
-      type: 'expression',
-      expression: (d, g) => d - g * 2
-    },
+    // {
+    //   name: 'D_network',
+    //   explain: 'Diameter of Spectrin Network in initial configuration',
+    //   type: 'expression',
+    //   expression: (d, g) => d - g * 2
+    // },
     {
       name: 'b',
       explain: 'Extra space between box boundary and vesicle',
@@ -93,7 +93,7 @@ export const initModelFormSettings: Form.Settings = {
     {
       name: 'shape',
       explain: 'Shape of bilayer particles, * no need to change this',
-      type: 'array',
+      type: 'numberArray',
       defaultValue: [1, 1, 1],
       step: 0.01,
       range: {

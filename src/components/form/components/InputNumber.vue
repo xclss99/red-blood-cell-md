@@ -18,18 +18,18 @@ import { ref } from 'vue'
 
 type Size = 'tiny' | 'small' | 'medium' | 'large'
 interface Props {
-  defaultValue: string
-  placeholder: string
-  clearable: boolean
-  disabled: boolean
-  readonly: boolean
-  round: boolean
-  size: Size
-  step: number
-  max: number
-  min: number
+  defaultValue?: string
+  placeholder?: string
+  clearable?: boolean
+  disabled?: boolean
+  readonly?: boolean
+  round?: boolean
+  size?: Size
+  step?: number
+  max?: number
+  min?: number
 }
-const props = withDefaults(defineProps<Partial<Props>>(), {
+const props = withDefaults(defineProps<Props>(), {
   defaultValue: '',
   placeholder: 'please input number',
   clearable: true,

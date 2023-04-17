@@ -3,29 +3,30 @@
   <n-scrollbar class="pane-container" trigger="none">
     <div class="params-form">
       <FormItem
-        v-for="(param, index) in params"
-        :key="`param-${index + 1}`"
-        :name="param.name"
-        :explain="param.explain"
-        :component="param.component"
+        v-for="(item, index) in items"
+        :key="`item-${index + 1}`"
+        :name="item.name"
+        :explain="item.explain"
+        :component="item.component"
       />
     </div>
   </n-scrollbar>
 </template>
 
 <script setup lang="ts">
-import type { Component } from 'vue'
+import { type Component } from 'vue'
 import FormItem from './FormItem.vue'
 
-interface Param {
+interface Item {
   name: string
   explain: string
-  component: Component
+  component?: Component
 }
 interface FormProps {
   title: string
-  params: Param[]
+  items: Item[]
 }
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<FormProps>()
 </script>

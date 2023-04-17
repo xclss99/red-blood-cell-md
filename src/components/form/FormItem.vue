@@ -6,20 +6,20 @@
       </template>
       <span> {{ explain }} </span>
     </n-popover>
-    <component :is="component" />
+    <component v-if="component" :is="component" />
   </div>
 </template>
 
 <script setup lang="ts">
 import type { Component } from 'vue'
 
-interface Param {
+interface Item {
   name: string
   explain: string
-  component: Component
+  component?: Component
 }
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const props = defineProps<Param>()
+const props = defineProps<Item>()
 </script>
 
 <style scoped></style>
