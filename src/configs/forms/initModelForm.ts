@@ -13,6 +13,23 @@ export const initModelFormSettings: Form.Settings = {
       }
     },
     {
+      name: 'test',
+      explain: 'test123',
+      type: 'string',
+      defaultValue: 'param test',
+      range: {
+        max: 10,
+        min: 1
+      }
+    },
+    {
+      name: 'test',
+      explain: 'test123',
+      defaultValue: 0,
+      type: 'enum',
+      enum: new Set(['a', 'b', 'c'])
+    },
+    {
       name: 'd0_vesicle',
       explain: 'Particle distance',
       type: 'number',
